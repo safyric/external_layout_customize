@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<template id="external_layout_customize" inherit_id="external_layout_background">
+			<xpath expr="//div[@class='header']" position="replace">
+				<div class="pull-right">
+					<h3 style="class="mt0 text-right" t-field="company.report_header"/>
+				</div>
+				<img t-if="company.logo" t-att-src="'data:image/png;base64,%s' % to_text(company.logo)" class="pull-left"/>
+				<div class="pull-left company_address">
+					<div>
+						<strong t-field="company.partner_id.name"/>
+					</div>
+					<span t-field="company.partner_id" t-field-options='{"widget": "contact", "fields": ["address"], "no_marker": true}'/>
+				</div>
+				<div class="clearfix mb8"/>
+			</xpath>
+			<xpath expr="//div[@class='footer']" position="replace">
+				<div class="text-center">
+					<ul class="list-inline">
+						<li t-if="company.phone"><i class="fa fa-phone"/> <span t-field="company.phone"/></li>
+						<li t-if="company.email"><i class="fa fa-at"/> <span t-field="company.email"/></li>
+						<li t-if="company.website"><i class="fa fa-globe"/> <span t-field="company.website"/></li>
+						<li t-if="company.vat"><i class="fa fa-building-o"/><t t-esc="company.country_id.vat_label or 'TIN'"/>: <span t-field="company.vat"/></li>
+					</ul>
+					<div t-field="company.report_footer"/>
+					<div class="text-muted">
+						Page:
+						<span class="page"/>
+						of
+						<span class="topage"/>
+                	</div>
+				</div>
+			</xpath>
+		</template>
+	</data>
+</odoo>
