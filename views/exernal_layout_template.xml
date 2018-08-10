@@ -9,9 +9,8 @@
 				<img t-if="company.logo" t-att-src="'data:image/png;base64,%s' % to_text(company.logo)" class="pull-left"/>
 				<div class="pull-left company_address">
 					<div>
-						<strong t-field="company.partner_id.name"/>
+						<strong t-field="company.report_header_name"/>
 					</div>
-					<span t-field="company.partner_id" t-field-options='{"widget": "contact", "fields": ["address"], "no_marker": true}'/>
 				</div>
 				<div class="clearfix mb8"/>
 			</xpath>
@@ -21,7 +20,9 @@
 						<li t-if="company.phone"><i class="fa fa-phone"/> <span t-field="company.phone"/></li>
 						<li t-if="company.email"><i class="fa fa-at"/> <span t-field="company.email"/></li>
 						<li t-if="company.website"><i class="fa fa-globe"/> <span t-field="company.website"/></li>
-						<li t-if="company.vat"><i class="fa fa-building-o"/><t t-esc="company.country_id.vat_label or 'TIN'"/>: <span t-field="company.vat"/></li>
+					</ul>
+					<ul class="list-inline">
+						<li t-if="company.partner_id"><span t-field="company.partner_id" t-field-options='{"widget": "contact", "fields": ["address"], "no_marker": true}'/></li>
 					</ul>
 					<div t-field="company.report_footer"/>
 					<div class="text-muted">
