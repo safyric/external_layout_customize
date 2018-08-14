@@ -1,28 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 	<data>
+		<template id="Reports Assets Inherited" inherit_id="web.report_assets_common">
+			<xpath expr="." position="inside">
+				<link rel="stylesheet" type="text/less" href="/external_layout_customize/static/src/less/style.less"/>
+			</xpath>
+		</template>
+		
 		<template id="external_layout_customize" inherit_id="external_layout_background">
-			<xpath expr="//div[@class='header']" position="replace">
+			<xpath expr="//div[@class='lass="header o_backgroun']" position="replace">
 				<div class="pull-right">
-					<h3 style="class="mt0 text-right" t-field="company.report_header"/>
+					<h3 style="font-family: 'Prompt', sans-serif;" class="mt0 text-right" t-field="company.report_header"/>
 				</div>
 				<img t-if="company.logo" t-att-src="'data:image/png;base64,%s' % to_text(company.logo)" class="pull-left"/>
-				<div class="pull-left company_address">
+				<div class="pull-left">
 					<div>
-						<strong t-field="company.report_header_name"/>
+						<strong style="font-family: 'Prompt', sans-serif; font-size:32px;" t-field="company.report_header_name"/>
 					</div>
 				</div>
 				<div class="clearfix mb8"/>
 			</xpath>
-			<xpath expr="//div[@class='footer']" position="replace">
+			<xpath expr="//div[@class='footer footer o_backgro']" position="replace">
 				<div class="text-center">
 					<ul class="list-inline">
+						<li t-if="company.street"><span t-field="company.street"/> | </li>
+						<li t-if="company.street2"><span t-field="company.street2"/> | </li>
+						<li t-if="company.city"><span t-field="company.city"/> | </li>
+						<li t-if="company.state_id"><span t-field="company.state_id"/> <span t-field="company.zip"/> | </li>
+						<li t-if="company.country_id"><span t-field="company.country_id"/></li><br/>
 						<li t-if="company.phone"><i class="fa fa-phone"/> <span t-field="company.phone"/></li>
 						<li t-if="company.email"><i class="fa fa-at"/> <span t-field="company.email"/></li>
 						<li t-if="company.website"><i class="fa fa-globe"/> <span t-field="company.website"/></li>
-					</ul>
-					<ul class="list-inline">
-						<li t-if="company.partner_id"><span t-field="company.partner_id" t-field-options='{"widget": "contact", "fields": ["address"], "no_marker": true}'/></li>
 					</ul>
 					<div t-field="company.report_footer"/>
 					<div class="text-muted">
