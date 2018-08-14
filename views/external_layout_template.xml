@@ -7,7 +7,7 @@
 			</xpath>
 		</template>
 		
-		<template id="external_layout_customize" inherit_id="external_layout_background">
+		<template id="web.external_layout_customize" inherit_id="web.external_layout_background">
 			<xpath expr="//div[@class='header o_background']" position="replace">
 				<div class="pull-right">
 					<h3 style="font-family: 'Prompt', sans-serif;" class="mt0 text-right" t-field="company.report_header"/>
