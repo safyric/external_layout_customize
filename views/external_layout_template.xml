@@ -8,7 +8,7 @@
 		</template>
 		
 		<template id="web.external_layout_customize" inherit_id="web.external_layout_background">
-			<xpath expr="//div[@class='header o_background']" position="replace">
+			<xpath expr="//div[@class='header o_background_header']" position="replace">
 				<div class="pull-right">
 					<h3 style="font-family: 'Prompt', sans-serif;" class="mt0 text-right" t-field="company.report_header"/>
 				</div>
@@ -20,7 +20,7 @@
 				</div>
 				<div class="clearfix mb8"/>
 			</xpath>
-			<xpath expr="//div[@class='footer footer o_backgro']" position="replace">
+			<xpath expr="//div[@class='footer o_background_footer']" position="replace">
 				<div class="text-center">
 					<ul class="list-inline">
 						<li t-if="company.street"><span t-field="company.street"/> | </li>
