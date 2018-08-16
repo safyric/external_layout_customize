@@ -24,6 +24,8 @@
 			<xpath expr="//img[@t-if='company.logo']" position="attributes">
 				<attribute name="style">height:50px;</attribute>
 			</xpath>
+			
+			<xpath expr="//li[@t-if='company.vat']" position="replace"/>
 		</template>
 	</data>
 </odoo>
