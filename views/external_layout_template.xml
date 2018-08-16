@@ -11,9 +11,9 @@
 			<xpath expr="//div[@class='pull-right']" position="replace">
 				<div class="pull-right company_address">
 					<div>
-						<strong style="font-family:'Arimo', sans-serif;font-size:12px;" t-field="company.partner_id.name"/>
+						<strong style="font-family:'Arimo', sans-serif;font-size:12px; text-align:right;" t-field="company.partner_id.name"/>
 					</div>
-					<span style="font-family:'Arimo', sans-serif;font-size:12px;" t-field="company.partner_id" t-field-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;], &quot;no_marker&quot;: true}"/>
+					<span style="font-family:'Arimo', sans-serif;font-size:12px; text-align:right;" t-field="company.partner_id" t-field-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;], &quot;no_marker&quot;: true}"/>
 				</div>
 			</xpath>
 			
@@ -24,8 +24,6 @@
 			<xpath expr="//img[@t-if='company.logo']" position="attributes">
 				<attribute name="style">height:50px;</attribute>
 			</xpath>
-			
-			<xpath expr="//li[@t-if='company.vat']" position="replace"/>
 		</template>
 	</data>
 </odoo>
