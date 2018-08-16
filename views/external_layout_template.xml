@@ -10,8 +10,8 @@
 		<template id="web.external_layout_customize" inherit_id="web.external_layout_background">
 			<xpath expr="//div[@class='pull-right']" position="replace">
 				<div class="pull-right company_address">
-					<div>
-						<strong style="font-family:'Arimo', sans-serif;font-size:12px; text-align:right;" t-field="company.partner_id.name"/>
+					<div style="font-family:'Arimo', sans-serif;font-size:12px; text-align:right;">
+						<strong t-field="company.partner_id.name"/>
 					</div>
 					<span style="font-family:'Arimo', sans-serif;font-size:12px; text-align:right;" t-field="company.partner_id" t-field-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;], &quot;no_marker&quot;: true}"/>
 				</div>
