@@ -8,7 +8,7 @@
 		</template>
 		
 		<template id="web.external_layout_customize" inherit_id="web.external_layout_background">
-			<xpath expr="//field[@name='company.report_header']" position="replace"/>
+			<xpath expr="//div[@class='pull-right']" position="replace"/>
 			
 			<xpath expr="//div[@class='pull-left company_address']" position="replace">
 				<span t-field="company.report_header_name" style="font-family:'Prompt', sans-serif; font-size:32px"/>
