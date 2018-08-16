@@ -8,8 +8,8 @@
 		</template>
 		
 		<template id="web.external_layout_customize" inherit_id="web.external_layout_background">
-			<xpath expr="//strong[@t-field='company.partner_id.name']" position="attributes">
-				<attribute name="style">font-family:prompt;</attribute>
+			<xpath expr="//strong[@t-field='company.partner_id.name']" position="replace">
+				<t t-field="company.report_header_name" style="font-family:'Prompt', sans-serif; font-size:32px"/>
 			</xpath>
 			<!--<xpath expr="//div[@class='header o_background_header']" position="replace">
 				<div class="pull-right">
