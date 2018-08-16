@@ -9,7 +9,7 @@
 		
 		<template id="web.external_layout_customize" inherit_id="web.external_layout_background">
 			<xpath expr="//div[@class='pull-left company_address']" position="replace">
-				<t t-field="company.report_header_name" style="font-family:'Prompt', sans-serif; font-size:32px"/>
+				<span t-field="company.report_header_name" style="font-family:'Prompt', sans-serif; font-size:32px"/>
 			</xpath>
 			<!--<xpath expr="//div[@class='header o_background_header']" position="replace">
 				<div class="pull-right">
