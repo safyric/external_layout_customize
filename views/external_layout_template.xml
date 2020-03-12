@@ -7,18 +7,16 @@
 			</xpath>
 		</template>
 		
-		<template id="web.external_layout_customize" inherit_id="web.external_layout_background">
-			<xpath expr="//div[@class='pull-right']" position="replace">
-				<div class="pull-right company_address">
-					<div style="font-family:'Arimo', sans-serif;font-size:12px; text-align:right;">
-						<strong t-field="company.partner_id.name"/>
-					</div>
-					<span style="font-family:'Arimo', sans-serif;font-size:12px; text-align:right;" t-field="company.partner_id" t-field-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;], &quot;no_marker&quot;: true}"/>
-				</div>
+		<template id="external_layout_background" inherit_id="web.external_layout_background">
+			<xpath expr="//div[@class='float-left company_addresss']" position="attributes">
+				<attribute name="class">pull-right company_address</attribute>
 			</xpath>
-			
-			<xpath expr="//div[@class='pull-left company_address']" position="replace">
-				<span t-field="company.report_header_name" style="font-family:'Prompt', sans-serif; font-size:38px"/>
+			<xpath expr="//div[hasclass('company_addresss')]" position="replace">
+				<div style="font-family:'Arimo', sans-serif;font-size:12px; text-align:right;">
+					<strong t-field="company.partner_id.name"/>
+				</div>
+				<span style="font-family:'Arimo', sans-serif;font-size:12px; text-align:right;" t-field="company.partner_id"
+				      t-options='{"widget": "contact", "fields": ["address"], "no_marker": true}'/>
 			</xpath>
 			
 			<xpath expr="//img[@t-if='company.logo']" position="attributes">
