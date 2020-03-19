@@ -12,8 +12,8 @@
                 <attribute name="class">float-right company_address</attribute>
             </xpath>
             <xpath expr="//img" position="after">
-                <div class="pull-left">
-                    <span t-field="company.report_header_name" style="font-family:'Prompt', sans-serif; font-size:30px" />
+                <div class="pull-left company_address">
+                    <span t-field="company.report_header_name" style="font-family:'Prompt', sans-serif; font-size:40px" />
                 </div>
             </xpath>
             <xpath expr="//div[hasclass('company_address')]" position="replace">
