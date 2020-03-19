@@ -11,7 +11,12 @@
             <xpath expr="//div[@class='float-left company_address']" position="attributes">
                 <attribute name="class">float-right company_address</attribute>
             </xpath>
-             <xpath expr="//div[hasclass('company_address')]" position="replace">
+            <xpath expr="//img" position="after">
+                <div class="float-left">
+                    <span>SAFYRIC</span>
+                </div>
+            </xpath>
+            <xpath expr="//div[hasclass('company_address')]" position="replace">
                 <div style="font-family:'Arimo', sans-serif;font-size:12px; text-align:right;">
                     <strong t-field="company.partner_id.name"/>
                 </div>
