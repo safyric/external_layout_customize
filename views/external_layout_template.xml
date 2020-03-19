@@ -1,38 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-	<data>
-		<template id="Reports Assets Inherited" inherit_id="web.report_assets_common">
-			<xpath expr="." position="inside">
-				<link rel="stylesheet" type="text/less" href="/external_layout_customize/static/src/less/style.less"/>
-			</xpath>
-		</template>
-		
-		<template id="external_layout_background" inherit_id="web.external_layout_background">
-			<xpath expr="//div[@class='float-left company_address']" position="attributes">
-				<attribute name="class">float-right company_address</attribute>
-			</xpath>
-			<xpath expr="//img" position="after">
-				<div class="float-left">
-					<span t-field="company.report_header_name"/>
-				</div>
-			</xpath>
-			<xpath expr="//div[hasclass('company_address')]" position="replace">
-				<div style="font-family:'Arimo', sans-serif;font-size:12px; text-align:right;">
-					<strong t-field="company.partner_id.name"/>
-				</div>
-				<span style="font-family:'Arimo', sans-serif;font-size:12px; text-align:right;" t-field="company.partner_id"
-				      t-options='{"widget": "contact", "fields": ["address"], "no_marker": true}'/>
-			</xpath>
-			
-			<xpath expr="//img[@t-if='company.logo']" position="attributes">
-				<attribute name="style">height:50px;</attribute>
-			</xpath>
-			
-			<xpath expr="//div[@class='footer o_background_footer']//div[@class='text-center']" position="attributes">
-				<attribute name="style">font-family:'Arimo', sans-serif;font-size:12px;</attribute>
-			</xpath>
-			
-			<xpath expr="//li[@t-if='company.vat']" position="replace"/>
-		</template>
-	</data>
+    <data>
+        <template id="Reports Assets Inherited" inherit_id="web.report_assets_common">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" type="text/less" href="/external_layout_customize/static/src/less/style.less"/>
+            </xpath>
+        </template>
+
+        <template id="external_layout_background" inherit_id="web.external_layout_background">
+            <xpath expr="//div[@class='float-left company_address']" position="attributes">
+                <attribute name="class">float-right company_address</attribute>
+            </xpath>
+            <xpath expr="//img" position="after">
+                <div class="float-left">
+                    <span t-field="company.report_header_name" style="font-family:'Prompt', sans-serif; font-size:30px" />
+                </div>
+            </xpath>
+            <xpath expr="//div[hasclass('company_address')]" position="replace">
+                <div style="font-family:'Arimo', sans-serif;font-size:12px; text-align:right;">
+                    <strong t-field="company.partner_id.name"/>
+                </div>
+                <span style="font-family:'Arimo', sans-serif;font-size:12px; text-align:right;" t-field="company.partner_id"
+                      t-options='{"widget": "contact", "fields": ["address"], "no_marker": true}'/>
+            </xpath>
+            <xpath expr="//img[@t-if='company.logo']" position="attributes">
+                <attribute name="style">height:50px;</attribute>
+            </xpath>
+
+            <xpath expr="//div[@class='footer o_background_footer']//div[@class='text-center']" position="attributes">
+                <attribute name="style">font-family:'Arimo', sans-serif;font-size:12px;</attribute>
+            </xpath>            
+            <xpath expr="//li[@t-if='company.vat']" position="replace"/>
+        </template>
+    </data>
 </odoo>
