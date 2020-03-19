@@ -13,7 +13,7 @@
             </xpath>
             <xpath expr="//img" position="after">
                 <div class="float-left">
-                    <span>SAFYRIC</span>
+                    <span style="font-zie:40px">S A F Y R I C</span>
                 </div>
             </xpath>
             <xpath expr="//div[hasclass('company_address')]" position="replace">
