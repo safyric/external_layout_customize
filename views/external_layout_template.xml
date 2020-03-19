@@ -12,7 +12,7 @@
                 <attribute name="class">float-right company_address</attribute>
             </xpath>
             <xpath expr="//img" position="after">
-                <div class="float-left">
+                <div class="pull-left">
                     <span t-field="company.report_header_name" style="font-family:'Prompt', sans-serif; font-size:30px" />
                 </div>
             </xpath>
