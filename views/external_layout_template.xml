@@ -12,8 +12,10 @@
                 <attribute name="class">float-right company_address</attribute>
             </xpath>
             <xpath expr="//img" position="after">
-                <div class="float-left">
-                    <span style="font-zie:40px">S A F Y R I C</span>
+                <div class="row">
+                    <div class="col-4 float-left">
+                        <span style="font-zie:40px">S A F Y R I C</span>
+                    </div>
                 </div>
             </xpath>
             <xpath expr="//div[hasclass('company_address')]" position="replace">
